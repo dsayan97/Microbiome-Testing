@@ -3,7 +3,7 @@ Microbiome-Testing
 
 This repository contains R code accompanying the article:
 
-Bhattacharjee et al. (2024).
+Bhattacharjee et al. (2026).
 “Testing Microbiome Community Differences in High Dimensions:
 A Bootstrap Approach for Compositional Data.”
 
