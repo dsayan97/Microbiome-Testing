@@ -14,7 +14,7 @@ The code implements:
 - the benchmark test of Cao, Lin & Li (2017) (CLL.R), and
 - the simulation scripts used in Section 6 of the paper.
 
-All functions are written in base R and Run_TwoSample.R rely only on the `highmean` package for data generation utilities.
+All functions are written in base R and Run_TwoSample.R relies only on the `highmean` package for data-generation utilities.
 
 ------------------------------------------------------
 1. Repository Structure
@@ -30,9 +30,13 @@ Parameters_Two.R    – Parameters for two-sample simulations
 
 Parameters_MANOVA.R – Parameters for MANOVA simulations
 
-Run_TwoSample.R     – Script to reproduce Tables 1, 2 and 3 in the main manuscript
+Run_TwoSample.R     – Script to produce values in Tables 1, 2, and 3 in the main manuscript (values might differ due to randomness)
 
-Run_MANOVA.R        – Script to reproduce Table 4 in the main manuscript
+Run_MANOVA.R        – Script to produce values in Table 4 in the main manuscript (values might differ due to randomness)
+
+Table_1.R           - Script to reproduce Table 1 in the main manuscript (use `set.seed(1)` to match the values in the main manuscript)
+
+Table_4.R           - Script to reproduce Table 4 in the main manuscript (use `set.seed(1)` to match the values in the main manuscript)
 
 ------------------------------------------------------
 2. Core Functions
@@ -164,9 +168,12 @@ K-Sample MANOVA Test:
     print(pval)
 
 ------------------------------------------------------
-6. Notes
+6. Notes on Reproducibility
 ------------------------------------------------------
 
+- Run Table_1.R and Table_4.R with `set.seed(1)` to reproduce tables 1 and 4 in the main manuscript.
+- Run Table_1.R with `cov.sim = 2`(line 13) and `cov.sim = 3`(line 13) with `set.seed(1)` to reproduce tables 2 and 3, respectively, in the main manuscript.
+- Warning!! Compilation time for Table_1.R and Table_4.R can be really long. Instead, use Parameters_Two.R and Parameters_MANOVA.R to produce parts of the tables 1-4. However, in this case, values might *not exactly match* due to randomness.
 - All data matrices should be CLR transformed (rows sum to 0).
 - Bootstrap-based methods may be computationally intensive; reduce N for testing if necessary.
 
