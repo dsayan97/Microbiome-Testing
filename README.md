@@ -14,7 +14,7 @@ The code implements:
 - the benchmark test of Cao, Lin & Li (2017) (CLL.R), and
 - the simulation scripts used in Section 6 of the paper.
 
-All functions are written in base R and Run_TwoSample.R relies only on the `highmean` package for data-generation utilities.
+All functions are written in base R. Run_TwoSample.R relies only on the `highmean` package for data-generation utilities, and Table_1.R and Table_4.R rely on `parallel`, `foreach`, and `doParallel` for parallel computation.
 
 ------------------------------------------------------
 1. Repository Structure
