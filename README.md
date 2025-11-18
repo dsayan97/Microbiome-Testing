@@ -176,6 +176,7 @@ K-Sample MANOVA Test:
 - Warning!! Compilation time for Table_1.R and Table_4.R can be really long. Instead, use Parameters_Two.R and Parameters_MANOVA.R to produce parts of the tables 1-4. However, in this case, values might *not exactly match* due to randomness.
 - All data matrices should be CLR transformed (rows sum to 0).
 - Bootstrap-based methods may be computationally intensive; reduce N for testing if necessary.
+- Necessary codes for reproducing the tables in the supplementary material are available upon request.
 
 ------------------------------------------------------
 7. Contact
